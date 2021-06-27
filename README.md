@@ -12,6 +12,8 @@ usually
 
     http://localhost:8080/spring/index.html
 
+![Screenshot](spring-boot-properties.png "Spring Boot Properties")
+
 ## Purpose of this Project
 
 This project is an example of how to create a spring boot web application plugin that comes with it's own React UI and is build using maven.

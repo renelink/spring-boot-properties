@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.link_intersystems.spring.properties.SpringBootPropertiesJavaConfig
+

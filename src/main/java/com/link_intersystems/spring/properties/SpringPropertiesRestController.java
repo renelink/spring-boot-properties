@@ -3,6 +3,8 @@ package com.link_intersystems.spring.properties;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.AbstractEnvironment;
@@ -42,7 +44,13 @@ public class SpringPropertiesRestController {
 				PropertyTO propertyTO = new PropertyTO(propertyName, propertyValue);
 				propertyTOs.add(propertyTO);
 			});
-			propertySourcTOs.add(new PropertySourceTO(propertySource.getName(), propertyTOs));
+			String propertySourceName = propertySource.getName();
+			Pattern classpathResourcePattern = Pattern.compile("class path resource \\[([^\\]]+)]");
+			Matcher classpathResourceMatcher = classpathResourcePattern.matcher(propertySourceName);
+			if (classpathResourceMatcher.find()) {
+				propertySourceName = classpathResourceMatcher.group(1);
+			}
+			propertySourcTOs.add(new PropertySourceTO(propertySourceName, propertyTOs));
 		}
 
 		return propertySourcTOs;

@@ -3,5 +3,5 @@
     <stringAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_ENCODING" value="UTF-8"/>
     <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${env_var:NODE_HOME}/npm.cmd"/>
     <stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="run watch:build"/>
-    <stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/spring-web-tools/src/main/frontend/}"/>
+    <stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/spring-boot-properties/src/main/frontend/}"/>
 </launchConfiguration>

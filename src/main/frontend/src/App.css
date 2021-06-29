@@ -3,7 +3,9 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
   pointer-events: none;
 }
 
@@ -37,6 +39,13 @@
     transform: rotate(360deg);
   }
 }
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 
 .mw-150 {
   max-width: 150px;
